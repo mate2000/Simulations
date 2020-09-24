@@ -2,13 +2,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from astropy.time import Time
+# import of NASA JPL Horizons online solar system database
 from astroquery.jplhorizons import Horizons
 
 # simulating a solar system starting from this date
 sim_start_date = "2018-01-01"
 sim_duration = 2 * 365                # (int) simulation duration in days
 m_earth = 5.9722e24 / 1.98847e30  # Mass of Earth relative to mass of the sun
-m_moon = 7.3477e22 / 1.98847e30
+m_moon = 7.3477e22 / 1.98847e30   # Mass of moon relarive to mass of the sun
 
 
 class Object:                   # define the objects: the Sun, Earth, Mercury, etc

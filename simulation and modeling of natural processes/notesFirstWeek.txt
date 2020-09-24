@@ -1,0 +1,79 @@
+Example of modeling method:
+ 
+- N-body system, molecular dynamic
+- Mathematical equation, ODE, PDE
+- Monte-Carlo methods(equilibrium, dynamic, kinetic)
+- Cellular Automata and Lattice Boltzmann methods
+- Multi-agents systems
+- Discrete Events simulation 
+- Complex networks 
+
+-----------------Space and time Simualtion------------------- 
+ - Natural processes occurs in space and evolve over time
+ - Sometimes one is only intersted in the time evolution regardless of the spatial location
+ - To capture the temporal dimension in a model are several ways:
+     Note(Time takes any real values)only mathematical models can deal with this approach[differential ecuation])
+     
+     -The duration of the process is broke up in small times interval (delta t), the time is discretize but the process is followed continuosly
+     -Alternatively we can only focus on the interesting moment of a process, the time is not dicretize but the evolution of a system broke up according to events this is the so-called(Discret-event-Simualtion[DES]) approach 
+ 
+ -To include the spatial dimensions in a model,there are also different ways:
+   
+   -Eulerian approach: We can take the point of view of an observer who sits at a fixed position x in space and records what he sees(Examples: local atmospheric pressure[p(x,t)], numbers of cars that passed by every minute)
+                       the eulerian approach attach a property of the system at each spatial location 
+         Note:Space can be continuos(mathematical model) or discretized in cells, forming a mesh covering the region of interest 
+     
+     
+   -Lagrangian approach: We can give the position of all the objects of interest, as a function of time(Example: the movement of the moon) 
+                         in the lagrangian approach the observer take the point of view of the moving object 
+
+
+-------------------Monte-Carlo methods-------------------------------------------
+
+
+  Monte-carlo:
+
+  -"With the Monte-Carlo method, one needs to do many simulations for sampling the process."
+    
+
+  -The goal of monte-carlo method is sampling physical process such as statiscal properties (toss a coin) in the monte-carlo method you dont resolve a given formula(Mathematical way) to resolve a problem you 
+    rather make a simulation of a process and tact to deduct this,deduce this result from an experient 
+  
+  -In this case problems such as tossing problems no need for a simulation but we can think ot other problems for which probality theory could hardly be applied such as, how long does it last. on average the card game "war"?
+
+     "have a deck of cards. I already separated that into two parts for two players, but that will be the two players at the same time. So this has been shuffled properly. And the idea is that each of the player, they showed a card on the top of the deck, which is basically my example is two. 
+      And the stronger card is this one, so it takes the seven, and the winner put it below his deck. So, now we just enter in this process and her,e we see that those have the same value so those is called a battle or a war and then, the way it goes is that you take a card result showing it, 
+       and cover it, and then, you do it again with the new card. 
+      And five is again stronger than four, so this player is taking everything. And putting that under this deck. And it goes on until there's no more cards." 
+
+     
+   
+  Markov-chain Monte-carlo (MCMC):
+
+
+   "MCMC methods are used to approximate the posterior distribution of a parameter of interest by random sampling in a probabilistic space."
+
+  
+   -The main goal is to sample stochastic(random) processes whose goal is to explore the state space  of a system 
+    
+   -"And the question is with what probability should I accept this move?"
+
+   -" I have, of course, a constraint to accept or reject this change, is that I would like to accept changes which correspond to a natural movement of this particle"
+  
+   -"So the question is, is there a way to choose this transition probability? So that I can move my system from one configuration to another by still respecting the probability distribution imposed by physics" 
+
+
+ https://towardsdatascience.com/a-zero-math-introduction-to-markov-chain-monte-carlo-methods-dcba889e0c50
+
+
+
+
+
+
+   Kinetic/Dynamic Monte - Carlo(KMC):
+
+
+    KMC rely on repeated random sampling to obtain numerical results and intented to simulate the time evolution of some processes occurring in nature. Typically these are processes that occur with known transition rates among states.
+ It is important to understand that these rates are inputs to the KMC algorithm, the method itself cannot predict them. 
+
+
