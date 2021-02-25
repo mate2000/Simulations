@@ -1,3 +1,4 @@
+# Simulation about Kinetic/Dynamic MonteCarlo method
 randomNumberList = [0.800, 0.801, 0.752, 0.661, 0.169, 0.956, 0.949,
                     0.003, 0.201, 0.291, 0.615, 0.131, 0.241, 0.685, 0.116, 0.241, 0.849]
 
@@ -6,11 +7,10 @@ dt = 2
 tpA = 4
 tpB = 3
 N = 6
-Tdt = 2
 z = 0
 
 for i in range(1):
-    for j in range(5):
+    for j in range(N):
         if randomNumberList[z] < (tpA/(tpA+tpB)):
             z += 1
             if randomNumberList[z] < (k1*dt):
